@@ -1,6 +1,6 @@
 <template>
-  <div class="col-md-4">
-    <span class="skill-name">{{name}}</span>
+  <div class="column small-12 medium-12 large-12 end">
+    <span class="skill-name roboto">{{name}}</span>
     <div
       class="skill-point-set"
       v-html="createSpan('dark-circle',n) + createSpan('hollow-circle',10-n)"

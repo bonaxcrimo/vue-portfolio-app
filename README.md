@@ -1,10 +1,10 @@
-# myresume
+# vue-portfolio-app
 
-> A Vue.js project
+> A Vue.js version of [react-portfolio-app](https://github.com/mukuljainx/portfolio-react-app)
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 
