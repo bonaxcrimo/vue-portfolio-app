@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="animated slideInUp">
     <h2 class="text-center raleway page-head">Get in Touch</h2>
 
     <div class="row">

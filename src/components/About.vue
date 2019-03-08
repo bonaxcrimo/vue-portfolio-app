@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="animated slideInUp">
     <AboutInfo></AboutInfo>
     <!-- <Skill name="Javascript" n="8"></Skill> -->
     <SkillContainer :skills="skills"/>

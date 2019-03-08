@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <section class="animated slideInUp">
     <HomeInfo/>
     <Modal openKnowMoreModal/>
-  </div>
+  </section>
 </template>
 <script>
 import HomeInfo from "./HomeInfo";

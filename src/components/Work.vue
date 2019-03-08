@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="animated slideInUp">
     <div class="row work-row align-center">
       <ShowcaseButton
         direction="left"
