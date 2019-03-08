@@ -82,9 +82,9 @@ export default {
   },
   props: ["id"],
   created() {
-    const workId = pathToId[this.$route.params.id];
+    const workId = this.pathToId[this.$route.params.id];
     if (workId === undefined) {
-      this.redirect = true;
+      this.$router.push("404");
     } else {
       this.work = workDetails[workId];
     }
