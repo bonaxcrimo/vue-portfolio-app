@@ -1,6 +1,11 @@
 <template>
   <section>
     <div class="row work-row align-center">
+      <ShowcaseButton
+        direction="left"
+        :imagePath="require(`@/assets/media/left.svg`)"
+        :onClickHandler="showPreviousWork"
+      />
       <Showcase :work="work"/>
       <ShowcaseButton
         direction="right"
@@ -39,22 +44,22 @@ export default {
   methods: {
     showNextWork() {
       const index = (this.index + 1) % this.workListLength;
-      // if (this.initialPage) {
-      //   this.history.push("/work/" + workList[index].detailLink);
-      // } else {
-      //   this.history.push(workList[index].detailLink);
-      // }
-      // this.work = workList[index];
-      // this.index = index;
-      console.log(index);
+      if (this.initialPage) {
+        this.$router.push("/work/" + workList[index].detailLink);
+      } else {
+        this.$router.push(workList[index].detailLink);
+      }
+      this.work = workList[index];
+      this.index = index;
     },
     showPreviousWork() {
       const index =
-        (((this.index - 1) % workListLength) + workListLength) % workListLength; // because JS modules can return negative too!
+        (((this.index - 1) % this.workListLength) + this.workListLength) %
+        this.workListLength; // because JS modules can return negative too!
       if (this.initialPage) {
-        this.history.push("/work/" + workList[index].detailLink);
+        this.$router.push("/work/" + workList[index].detailLink);
       } else {
-        this.history.push(workList[index].detailLink);
+        this.$router.push(workList[index].detailLink);
       }
       this.work = workList[index];
       this.index = index;
