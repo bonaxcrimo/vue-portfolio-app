@@ -2,15 +2,22 @@
   <section>
     <div class="row work-row align-center">
       <Showcase :work="work"/>
+      <ShowcaseButton
+        direction="right"
+        :imagePath="require(`@/assets/media/left.svg`)"
+        :onClickHandler="showNextWork"
+      />
     </div>
   </section>
 </template>
 <script>
 import workList from "./data/workList";
 import Showcase from "./Showcase";
+import ShowcaseButton from "./ShowcaseButton";
 export default {
   components: {
-    Showcase: Showcase
+    Showcase: Showcase,
+    ShowcaseButton: ShowcaseButton
   },
   data() {
     return {
@@ -31,18 +38,19 @@ export default {
   },
   methods: {
     showNextWork() {
-      const index = (this.index + 1) % workListLength;
-      if (this.initialPage) {
-        this.history.push("/work/" + workList[index].detailLink);
-      } else {
-        this.history.push(workList[index].detailLink);
-      }
-      this.work = workList[index];
-      this.index = index;
+      const index = (this.index + 1) % this.workListLength;
+      // if (this.initialPage) {
+      //   this.history.push("/work/" + workList[index].detailLink);
+      // } else {
+      //   this.history.push(workList[index].detailLink);
+      // }
+      // this.work = workList[index];
+      // this.index = index;
+      console.log(index);
     },
     showPreviousWork() {
       const index =
-        (((this.index - 1) % workListLength) + workListLength) & workListLength; // because JS modules can return negative too!
+        (((this.index - 1) % workListLength) + workListLength) % workListLength; // because JS modules can return negative too!
       if (this.initialPage) {
         this.history.push("/work/" + workList[index].detailLink);
       } else {
