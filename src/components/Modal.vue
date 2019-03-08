@@ -80,8 +80,7 @@ export default {
       this.customModalWrapperClass = "display-none";
       this.columnCardClass = "display-none";
     }
-  },
-  mounted: {}
+  }
 };
 </script>
 

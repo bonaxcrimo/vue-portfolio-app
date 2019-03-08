@@ -32,16 +32,7 @@ export default {
   components: {
     Skill: Skill
   },
-  props: ["skills"],
-  methods: {
-    setSkill(data) {
-      let set = "";
-      for (let i = 0; i < data.length; i++) {
-        set += `<Skill :name="${data[i].name}" :n="${data[i].value}"/>`;
-      }
-      return set;
-    }
-  }
+  props: ["skills"]
 };
 </script>
 
