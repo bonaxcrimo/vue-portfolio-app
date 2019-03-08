@@ -3,7 +3,7 @@
     <div class="work-showcase-img-container">
       <img class="work-showcase-img" :src="require(`@/assets/media/work/${work.img}`)">
       <div class="work-showcase-img-detail text-center" v-bind:class="work.detailTextColor">
-        <router-link class="hollow button work-showcase-img-button" :to="to">View Project</router-link>
+        <router-link class="hollow button work-showcase-img-button" :to="changeTo()">View Project</router-link>
 
         <p class="roboto weight-medium">{{work.what}}</p>
       </div>
@@ -24,7 +24,7 @@
           <a :href="work.websiteLink" target="_blank" rel="noopener noreferrer">Website</a>
           |
         </span>
-        <router-link class="detail-link-button" :to="to.pathname">View Project</router-link>
+        <router-link class="detail-link-button" :to="changeTo()">View Project</router-link>
       </div>
     </div>
   </div>
@@ -33,12 +33,13 @@
 export default {
   data() {
     return {
-      to: {
-        pathname: "/work/" + this.work.detailLink + "/details/",
-        query: this.work.id
-      },
       image: "@/assets/media/work" + this.work.img
     };
+  },
+  methods: {
+    changeTo() {
+      return "/work/" + this.work.detailLink + "/details/";
+    }
   },
   props: ["work"]
 };

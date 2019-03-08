@@ -12,14 +12,14 @@
         <div class="column small-12 text-center">
           <a
             class="hollow button resume-button roboto fix-width"
-            href="{this.state.work.website}"
+            :href="work.website"
             target="_blank"
             rel="noopener noreferrer"
             v-if="work.website!==''"
           >Website</a>
           <a
             class="hollow button resume-button roboto fix-width"
-            href="{this.state.work.github}"
+            :href="work.github"
             target="_blank"
             rel="noopener noreferrer"
             v-if="work.github!==''"
