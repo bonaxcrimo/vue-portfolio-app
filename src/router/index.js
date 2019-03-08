@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Home from '@/components/Home';
 import About from '@/components/About';
 import Work from '@/components/Work';
+import WorkDetail from '@/components/WorkDetail';
 import Contact from '@/components/Contact';
 import NoMatch from '@/components/NoMatch';
 Vue.use(Router);
@@ -22,12 +23,20 @@ export default new Router({
     {
       path: '/work',
       name: 'Work',
-      component: Work
+      component: Work,
+      props: true
     },
     {
       path: '/work/:id',
       name: 'Work',
-      component: Work
+      component: Work,
+      props: true
+    },
+    {
+      path: '/work/:id/details',
+      name: 'WorkDetails',
+      component: WorkDetail,
+      props: true
     },
     {
       path: '/contact',

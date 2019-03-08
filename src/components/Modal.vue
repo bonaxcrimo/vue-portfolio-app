@@ -28,7 +28,7 @@
               <div class="small-10 medium-3 column">
                 <router-link class="nav-link" to="/about">
                   <div class="card know-more-modal know-more-modal-card align-middle">
-                    <img src="@/assets/media/about.svg" alt="Mukul Jain | About Icon">
+                    <img src="@/assets/media/about.svg" alt="Bona Tua | About Icon">
                     <p class="raleway">About</p>
                   </div>
                 </router-link>
@@ -36,7 +36,7 @@
               <div class="small-10 medium-3 column">
                 <router-link class="nav-link" to="/work">
                   <div class="card know-more-modal know-more-modal-card align-middle">
-                    <img src="@/assets/media/work.svg" alt="Mukul Jain | Work Icon">
+                    <img src="@/assets/media/work.svg" alt="Bona Tua | Work Icon">
                     <p class="raleway">Work</p>
                   </div>
                 </router-link>
@@ -44,7 +44,7 @@
               <div class="small-10 medium-3 column end">
                 <router-link class="nav-link" to="/contact">
                   <div class="card know-more-modal know-more-modal-card align-middle">
-                    <img src="@/assets/media/contact.svg" alt="Mukul Jain | Contact Icon">
+                    <img src="@/assets/media/contact.svg" alt="Bona Tua | Contact Icon">
                     <p class="raleway">Contact</p>
                   </div>
                 </router-link>
