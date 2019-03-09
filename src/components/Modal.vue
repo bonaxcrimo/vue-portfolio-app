@@ -6,7 +6,7 @@
         v-bind:class="[modalKnowMoreWrapperClass]"
         ref="modalKnowMoreWrapper"
       >
-        <a href="#modal" class="know-more raleway" v-on:click="openKnowMoreModal">Know More</a>
+        <a class="know-more raleway" v-on:click="openKnowMoreModal">Know More</a>
         <div
           class="custom-modal-wrapper"
           v-bind:class="customModalWrapperClass"
